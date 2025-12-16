@@ -10,6 +10,9 @@ Note that Internet Explorer is not supported.
 
 Poki Uiua can also be used for [exercising your Uiua skills](https://mlochbaum.github.io/bqncrate/quiz). (todo fix link)
 
+## TODO:
+- find a format for table.tsv that is more convenient to edit.
+
 ## Usage
 
 *→ See also [the video introduction](https://dyalog.tv/Dyalog19/?v=r3owA7tfKE8) to APLcart.*
