@@ -1,13 +1,13 @@
 SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTPUT
-+	Add	Primitive	Number	true	add addition	+ 1 3	4
--@0	Convert digit to number	Idiom	String	true	digits number	-@0 @5	5
-⇌⍉	Rotate a matrix 90 degrees counterclockwise	Idiom	Array	false	rotate matrix	♭ ⇌⍉  ↯2_2⇡4	[1 3 0 2]
-⍜△¯	Rotate a matrix 180 degrees counterclockwise	Idiom	Array	true	rotate matrix	♭ ⍜△¯ ↯2_2⇡4	[3 2 1 0]
-⊜□⊸≠	Split on an element	Idiom	Array	false	split string	⊜□⊸≠ @\s "split this on spaces"	["split"│"this"│"on"│"spaces"]
++	add	Primitive	Number	true	add addition	+ 1 3	4
+-@0	convert digit to number	Idiom	String	true	digits number	-@0 @5	5
+⇌⍉	rotate a matrix 90 degrees counterclockwise	Idiom	Array	false	rotate matrix	♭ ⇌⍉  ↯2_2⇡4	[1 3 0 2]
+⍜△¯	rotate a matrix 180 degrees counterclockwise	Idiom	Array	true	rotate matrix	♭ ⍜△¯ ↯2_2⇡4	[3 2 1 0]
+⊜□⊸≠	split on an element	Idiom	Array	false	split string	⊜□⊸≠ @\s "split this on spaces"	["split"│"this"│"on"│"spaces"]
 ⊏	apply a permutation	Primitive	Maths	false	permutation	⊏ 1_2_0_3 "abcd"	"bcad"
 ⇡	identity permutation	Primitive	Maths	false	permutation	⇡4	[0 1 2 3]
 ⊏	compose permutations	Primitive	Maths	false	permutation	⊏ 1_0_2_3 2_3_0_1	[3 2 0 1]
-⍏	Invert a permutation	Primitive	Maths	false	inverse	⍏ [1 2 0 3]	[2 0 1 3]
+⍏	invert a permutation	Primitive	Maths	false	inverse	⍏ [1 2 0 3]	[2 0 1 3]
 -⊸¬	linearly map [0, 1] onto [-1, 1]	Idiom	Number	true	wrench stretch lerp	⁅₁₀ -⊸¬ ÷⟜⇡ 5	[¯1 ¯0.6 ¯0.2 0.2 0.6]
 ∿	sine	Primitive	Number	true	sin trig math	∿ 0	0
 ∿+η	cosine	Idiom	Number	true	cos trig math	∿+η 0	1
