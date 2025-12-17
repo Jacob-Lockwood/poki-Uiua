@@ -15,7 +15,7 @@ I = _ => {
         c = ps.map(r => r[0])
         e = ps.map(r => r[1])
         isprim = ps.map(r => r[2] == "Primitive")
-	rankpoly = ps.map(r => Object({true: "✅ rank-polymorphic", false: "❌ not polymorphic", irrelevant: "-"})[r[4]])
+	rankpoly = ps.map(r => Object({true: "✅ rank-polymorphic", false: "❌ not polymorphic", irrelevant: "➖ niladic"})[r[4]])
         p = d.split(/\r?\n/g).slice(1, -1).map(x => x.toLowerCase().replace(/http\S+\t/, "(>)").replace(/http\S+$/, "(?)"))
         r = ""
         for (var i = 0; i < c.length; i++) {
