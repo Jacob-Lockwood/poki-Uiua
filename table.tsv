@@ -1,8 +1,8 @@
 SYNTAX	DESCRIPTION					CLASS		CATEGORY	KEYWORDS	EXAMPLE				EXAMPLE OUTPUT
 +	Add						Primitive	Number		add addition	+ 1 3				4
 -@0	Convert digit to number				Idiom		String		digits number	-@0 @5				5
-⇌⍉	Rotate a matrix 90 degrees counterclockwise	Idiom		Array		rotate matrix	♭ ⇌⍉ ↯2_2⇡4			[1 3 0 2]
-⇌≡⇌	Rotate a matrix 180 degrees counterclockwise	Idiom		Array		rotate matrix	♭⇌≡⇌↯2_2 ⇡4			[3 2 1 0]
+⇌⍉	Rotate a matrix 90 degrees counterclockwise	Idiom		Array		rotate matrix	♭ ⇌⍉  ↯2_2⇡4			[1 3 0 2]
+⍜△¯	Rotate a matrix 180 degrees counterclockwise	Idiom		Array		rotate matrix	♭ ⍜△¯ ↯2_2⇡4			[3 2 1 0]
 ⊜□⊸≠	Split on an element				Idiom		Array		split string	⊜□⊸≠ @\s "split this on spaces"	["split"│"this"│"on"│"spaces"]
 /+	Sum an array					Idiom		Array		sum		/+⇡5				10
 /↥	Find the largest element in an array		Idiom		Array		max maximum	/↥⇡5				4
@@ -15,7 +15,7 @@ SYNTAX	DESCRIPTION					CLASS		CATEGORY	KEYWORDS	EXAMPLE				EXAMPLE OUTPUT
 /+⌵	taxicab norm	Idiom	Number	distance vector length size manhattan	/+⌵ ¯3_2	5
 /↥⌵	Chebyshev norm	Idiom	Number	distance vector length size maximum	/↥⌵ ¯4_7	7
 ÷⊃⧻/+	arithmetic mean	Idiom	Number	average AM	÷⊃⧻/+ ⇡5	2
-ⁿ⨪⊃⧻/×	geometric mean	Idiom	Number	average GM	⁅₁₀ ⁿ⨪⊃⧻/× 3_27_6561	81
+⌝ⁿ⊃⧻/×	geometric mean	Idiom	Number	average GM	⁅₁₀ ⌝ⁿ⊃⧻/× 3_27_6561	81
 ⍜°√(÷⊃⧻/+)	quadratic mean	Idiom	Number	root mean square average QM RMS	⁅₃ ⍜°√(÷⊃⧻/+) [1 2 3 4]	2.739
 ⧻⊚	count number of 1s in boolean array	Idiom	Array	how many	⧻⊚ ◿2↯3_3⇡9	4
 +@a⇡26	lowercase latin alphabet	Idiom	String	alphabet letter	+@a⇡26	"abcdefghijklmnopqrstuvwxyz"
