@@ -1,7 +1,7 @@
 @font-face{font-family:P;src:local('Uiua386'),url(Uiua386.ttf)} *{font-family:P;text-decoration:none}
 i{display:none}
 html,body{height:100%}
-body{display:flex;flex-flow:column;margin:0;font-size:16px;
+body{display:flex;flex-flow:column;margin:auto;max-width:max(85vw, 900px); font-size:16px;
   overflow:hidden;position:relative;color:#222;  content:"w";background:#ddd                   }  .w{background:#ddd;filter:invert(0)}
 @media(prefers-color-scheme:dark){body[class=""]{content:"g";background:#444;filter:invert(.85)}} .g{background:#444;filter:invert(.85)}
 @media(prefers-contrast:more)    {body[class=""]{content:"b";background:#222;filter:invert(1)  }} .b{background:#222;filter:invert(1)}
@@ -19,6 +19,7 @@ a{place-self:center;display:inline-block;text-align:center;color:unset;
 #t{width:100%;table-layout:fixed;color:#333;white-space:pre-wrap;word-wrap:break-word}
 td{padding:.5em}
 td a{margin-right:0.75em;color:#bbb}
+tbody tr:nth-child(even) {background: #eee;}
 td:first-child a:before{display:inline-block;position:relative;margin-left:0.33ex;line-height:0;content:'';
   border:0.6ex solid transparent;border-left:1ex solid currentcolor;border-right:none}
 #u{flex:1;text-align:center}
