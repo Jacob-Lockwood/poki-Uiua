@@ -23,3 +23,8 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 ¯	toggle case	Primitive	String	true	uppercase capital lowercase letter	¯ "HeLlO WoRlD"	"hElLo wOrLd"
 ×⊃(≥@0|≤@9)	is a character a digit?	Idiom	String	true	number parse	×⊃(≥@0|≤@9) "a98sf98-34 "	[0 1 1 0 0 1 1 0 1 1 0]
 ∊⇡10-@0	is character a digit?	Idiom	String	true	number parse	∊⇡10-@0 "abcd012689aklfs"	[0 0 0 0 1 1 1 1 1 1 0 0 0 0 0]
+°/×	prime factorisation	Idiom	Maths	true	decompose	°/× 18	[2 3 3]
+=1⧻°/×	is prime?	Idiom	Maths	false	primality test	=1⧻°/× 19	1
+=⊸(⊣°/×)	is prime?	Idiom	Maths	true	primality test	=⊸(⊣°/×) +16⇡8	[0 1 0 1 0 0 0 1]
+⊚=0◿⊸(⇡+1)	divisors of a positive number	Idiom	Maths	false	divide	⊚=0◿⊸(⇡+1) 20	[1 2 4 5 10 20]
+⊚=0◿⊸⇡	proper divisors of a positive number	Idiom	Maths	false	divide	⊚=0◿⊸⇡ 20	[1 2 4 5 10]
