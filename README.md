@@ -12,6 +12,7 @@ Poki Uiua can also be used for [exercising your Uiua skills](https://regr4.githu
 
 ## TODO:
 - Add more entries
+- Fix the css (in particular the light-dark-high-contrast mode handling)
 
 ## Usage
 
