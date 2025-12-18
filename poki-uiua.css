@@ -26,7 +26,7 @@ td:nth-child(2) a:before{display:inline-block;position:relative;margin-left:0.33
 #w{background:linear-gradient(to right,currentcolor 50%,transparent 50%)}
 @media(max-width:910px){s{display:none}}
 @media(max-width:420px){.o,#m{display:none} #u{text-align:right} #q{margin-right:0}}
-tr :nth-child(1){width: 25%; text-align: right}
-tr :nth-child(2){width: 5%}
-tr :nth-child(3){width: 50%}
-tr :nth-child(4){width: 20%}
+tr :nth-child(1){width: 30%; text-align: right}
+tr :nth-child(2){width: 65px}
+tr :nth-child(3){width: 70%}
+tr :nth-child(4){width: 220px}
