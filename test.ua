@@ -9,7 +9,7 @@ EOC ← 7
 ↘₁In
 ≡(
   °⊟⊏ EC_EOC
-  &runc ⊸⊂[□"uiua" □"eval" □"--no-color" □"--"]
+  &runc ⊸⊂[□"uiua" □"eval" □"-x" □"--no-color" □"--"]
   =0
   ⨬(|4.0 &p $"Uiua failed when testing _" ⊙◌◌◌
   | ◇≍∩◇(▽⊸(≥@!))⊙˜⊙∘◌

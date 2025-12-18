@@ -11,6 +11,7 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 -⊸¬	linearly map [0, 1] onto [-1, 1]	Idiom	Number	true	wrench stretch lerp	⁅₁₀ -⊸¬ ÷⟜⇡ 5	[¯1 ¯0.6 ¯0.2 0.2 0.6]
 ∿	sine	Primitive	Number	true	sin trig math	∿ 0	0
 ∿+η	cosine	Idiom	Number	true	cos trig math	∿+η 0	1
+∂∿	cosine (experimental)	Idiom	Maths	true	cos trig math	⁅₁₀ ∂∿ η	0
 ⍜°√/+	euclidean norm	Idiom	Number	false	distance vector length size	⍜°√/+ 3_4	5
 /+⌵	taxicab norm	Idiom	Number	false	distance vector length size manhattan	/+⌵ ¯3_2	5
 /↥⌵	Chebyshev norm	Idiom	Number	false	distance vector length size maximum	/↥⌵ ¯4_7	7
@@ -33,3 +34,4 @@ SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTP
 ⍥/◇⊂∞	flatten nested boxed array	Idiom	Array	true	join boxes concatenate	⍥/◇⊂∞ {{1 4} {[3 4]} [2 5] 4}	[1 4 3 4 2 5 4]
 ⍜⊏⇌ 	swap entries in array	Idiom	Array	false	_	⍜⊏⇌ 2_4 ⇡5	[0 1 4 3 2]
 ⍜⊡⇌ 	swap entries in array	Idiom	Array	true	_	♭ ⍜⊡⇌ [0_1 1_2] ↯2_3 ⇡6	[0 5 2 3 4 1]
+↧⟜↥	set to a given value	Idiom	array	true	replace const	↧⟜↥ 5 ⇡10	[5 5 5 5 5 5 5 5 5 5]
