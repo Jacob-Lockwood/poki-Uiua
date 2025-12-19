@@ -1,3 +1,4 @@
+#! /bin/env python3
 import sys
 
 with open("table.tsv", "a", encoding="utf-8") as f:
@@ -8,9 +9,9 @@ with open("table.tsv", "a", encoding="utf-8") as f:
             print("\nGoodbye!")
             sys.exit(0)  # exit upon Control-d
         description = input("Description: ")
-        class_ = input("Class: ")
-        category = input("Category: ")
-        polymorphic = input("Is it rank-polymorphic? (true/false/irrelevant)")
+        class_ = input("Class: (Primitive/Idiom) ")
+        category = input("Category: (Array/Maths/String) ")
+        polymorphic = input("Is it rank-polymorphic? (true/false/irrelevant) ")
         keywords = input("Keywords: ")
         example = input("Example: ")
         example_output = input("Example output: ")
