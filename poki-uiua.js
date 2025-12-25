@@ -16,11 +16,12 @@ I = _ => {
         e = ps.map(r => r[1])
         isprim = ps.map(r => r[2] == "Primitive")
 	rankpoly = ps.map(r => Object({true: "<span class=\"emoji\">✅</span> rank-polymorphic", false: "<span class=\"emoji\">❌</span> not polymorphic", irrelevant: "<span class=\"emoji\">➖</span> N/A"})[r[4]])
+	experimental = ps.map(r => r[8] == "true" ? "<span class=\"emoji\">🧪</span> experimental" : "")
         p = d.split(/\r?\n/g).slice(1, -1).map(x => x.toLowerCase().replace(/http\S+\t/, "(>)").replace(/http\S+$/, "(?)"))
         r = ""
         for (var i = 0; i < c.length; i++) {
 	    console.log(e[i])
-            r += `<tr><td>${c[i]}</td><td><a href="https://www.uiua.org/docs/${encodeURIComponent(c[i])}"/></td><td>${e[i]}</td><td>${rankpoly[i]}</td></tr>`
+            r += `<tr><td>${c[i]}</td><td><a href="https://www.uiua.org/docs/${encodeURIComponent(c[i])}"/></td><td>${e[i]}</td><td>${rankpoly[i]}</td><td>${experimental[i]}</td></tr>`
         }
         t.innerHTML = r
         F(Q(q.value = s.get("q")))

@@ -1,62 +1,62 @@
-SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTPUT
-¬	logical not; 1-x	Primitive	Maths	true	boolean	¬ 7	¯6
-±	sign of a number	Primitive	Maths	true	signum normalise normalize unit	± -₂⇡5	[¯1 ¯1 0 1 1]
-±	normalise a complex number	Primitive	Maths	true	normalize unit	⁅₅ ± ℂ4 3	0.6+0.8i
-±	get case of a character	Primitive	String	true	uppercase lowercase letter	± "abAB,."	[¯1 ¯1 1 1 0 0]
-¯	negate number	Primitive	Maths	true	negative	¯ 1	¯1
-¯	toggle case	Primitive	String	true	capitalise capitalize uppercase lowercase	¯"aAbB,."	"AaBb,."
-¯₄	rotate a quarter turn in the complex plane	Primitive	Maths	true	complex multiply i	¯₄ 2r5i	¯5+2i
-+	add	Primitive	Maths	true	add addition	+ 1 3	4
--@0	convert digit to number	Idiom	String	true	digits number	-@0 @5	5
-+@0	convert number to digit	String	Idiom	true	digits number	+@0 ⇡10	"0123456789"
-⍉⇌	rotate a matrix 90 degrees clockwise	Idiom	Array	false	rotate matrix	♭ ⍉⇌ ↯2_2⇡4	[2 0 3 1]
-⍜△¯	rotate a matrix 180 degrees counterclockwise	Idiom	Array	true	rotate matrix	♭ ⍜△¯ ↯2_2⇡4	[3 2 1 0]
-⇌⍉	rotate a matrix 90 degrees counterclockwise	Idiom	Array	false	rotate matrix	♭ ⇌⍉  ↯2_2⇡4	[1 3 0 2]
-⊜□⊸≠	split on an element	Idiom	Array	false	split string	⊜□⊸≠ @\s "split this on spaces"	["split"│"this"│"on"│"spaces"]
-⊏	apply a permutation	Primitive	Maths	false	permutation	⊏ 1_2_0_3 "abcd"	"bcad"
-⇡	identity permutation	Primitive	Maths	false	permutation	⇡4	[0 1 2 3]
-⊏	compose permutations	Primitive	Maths	false	permutation	⊏ 1_0_2_3 2_3_0_1	[3 2 0 1]
-⍏	invert a permutation	Primitive	Maths	false	inverse	⍏ [1 2 0 3]	[2 0 1 3]
--⊸¬	linearly map [0, 1] onto [-1, 1]	Idiom	Maths	true	wrench stretch lerp	⁅₁₀ -⊸¬ ÷⟜⇡ 5	[¯1 ¯0.6 ¯0.2 0.2 0.6]
-∿	sine	Primitive	Maths	true	sin trig math	∿ 0	0
-∿+η	cosine	Idiom	Maths	true	cos trig math	∿+η 0	1
-∂∿	cosine (experimental)	Idiom	Maths	true	cos trig math	⁅₁₀ ∂∿ η	0
-⍜°√/+	euclidean norm	Idiom	Maths	false	distance vector length size	⍜°√/+ 3_4	5
-⌵ℂ	euclidean norm (2d)	Idiom	Maths	true	distance vector length size	⌵ℂ 5 12	13
-/+⌵	taxicab norm	Idiom	Maths	false	distance vector length size manhattan	/+⌵ ¯3_2	5
-/↥⌵	Chebyshev norm	Idiom	Maths	false	distance vector length size maximum	/↥⌵ ¯4_7	7
-÷⊃⧻/+	arithmetic mean	Idiom	Maths	false	average AM	÷⊃⧻/+ ⇡5	2
-⌝ⁿ⊃⧻/×	geometric mean	Idiom	Maths	false	average GM	⁅₁₀ ⌝ⁿ⊃⧻/× 3_27_6561	81
-⍜°√(÷⊃⧻/+)	quadratic mean	Idiom	Maths	false	root mean square average QM RMS	⁅₃ ⍜°√(÷⊃⧻/+) [1 2 3 4]	2.739
-÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆	Median	Idiom	Maths	true	average	÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆ ⇡10	4.5
-⧻⊚	sum of natural array	Idiom	Array	true	how many	⧻⊚ ◿2↯3_3⇡9	4
-+@a⇡26	lowercase latin alphabet	Idiom	String	irrelevant	alphabet letter	+@a⇡26	"abcdefghijklmnopqrstuvwxyz"
-⌵	uppercase	Primitive	String	true	capitalize capital letter	⌵ "HeLlO WoRlD"	"HELLO WORLD"
-¯	toggle case	Primitive	String	true	uppercase capital lowercase letter	¯ "HeLlO WoRlD"	"hElLo wOrLd"
-×⊃(≥@0|≤@9)	is a character a digit?	Idiom	String	true	number parse	×⊃(≥@0|≤@9) "a98sf98-34 "	[0 1 1 0 0 1 1 0 1 1 0]
-∊⇡10-@0	is character a digit?	Idiom	String	true	number parse	∊⇡10-@0 "abcd012689aklfs"	[0 0 0 0 1 1 1 1 1 1 0 0 0 0 0]
-°/×	prime factorisation	Idiom	Maths	true	decompose	°/× 18	[2 3 3]
-=1⧻°/×	is prime?	Idiom	Maths	false	primality test	=1⧻°/× 19	1
-=1/+>1°/×	is prime?	Idiom	Maths	true	primality test	▽ ⊸(=1/+>1°/×) +₁⇡20	[2 3 5 7 11 13 17 19]
-⊚=0◿⊸(⇡+1)	divisors of a positive number	Idiom	Maths	false	divide	⊚=0◿⊸(⇡+1) 20	[1 2 4 5 10 20]
-⊚=0◿⊸⇡	proper divisors of a positive number	Idiom	Maths	false	divide	⊚=0◿⊸⇡ 20	[1 2 4 5 10]
-°▽⍆	row occurrence count	Idiom	Array	irrelevant	_	⊂°▽⍆ 7_3_4_6_7_4	[1 2 1 2 3 4 6 7]
-/◇⊂	flatten boxed array	Idiom	Array	false	join boxes concatenate	/◇⊂ {[1 3] [5 2] [3 6]}	[1 3 5 2 3 6]
-⍥/◇⊂∞	flatten nested boxed array	Idiom	Array	true	join boxes concatenate	⍥/◇⊂∞ {{1 4} {[3 4]} [2 5] 4}	[1 4 3 4 2 5 4]
-⍜⊏⇌ 	swap entries in array	Idiom	Array	false	_	⍜⊏⇌ 2_4 ⇡5	[0 1 4 3 2]
-⍜⊡⇌ 	swap entries in array	Idiom	Array	true	_	♭ ⍜⊡⇌ [0_1 1_2] ↯2_3 ⇡6	[0 5 2 3 4 1]
-↧⊸↥	set NaNs to a given value	Idiom	array	true	replace const	↧⊸↥ 5 [1 NaN 4]	[1 5 4]
-⤸₁	transpose image	Primitive	Images	irrelevant	image flip diagonal	△  ⤸₁ °△ 2_3_4	[3 2 4]
-♭₀	first element of array	Primitive	Array	true	first matrix	♭₀ °△2_3_4	0
-°⍆	shuffle rows of array	Primitive	Array	irrelevant	random	⍆ °⍆ ⇡5	[0 1 2 3 4]
-⍜∩⋯⬚0×	bitwise and	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0× ⊸+₂⇡5	[0 1 0 1 4]
-⍜∩⋯⬚0↥	bitwise or	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0↥ ⊸+₂⇡5	[2 3 6 7 6]
-⍜⋯¬	bitwise not	Idiom	Maths	true	bitwise boolean	⍜⋯¬ ⇡8	[7 6 5 4 3 2 1 0]
-⍜∩⋯⬚0≠	bitwise xor	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0≠ ⊸+₂⇡5	[2 2 6 6 2]
-×	boolean and	Primitive	Maths	true	boolean conjunction	× 0 1	0
-↥	boolean or	Primitive	Maths	true	boolean disjunction	↥ 0 1	1
-≠	boolean xor	Primitive	Maths	true	exclusive or disjunction boolean	≠ 0 1	1
-=	boolean xnor	Primitive	Maths	true	boolean material biconditional	= 0 1	0
-≥	boolean implication	Primitive	Maths	true	material conditional implies	≥ 0 1	1
-∨	gcd; boolean or (experimental)	Idiom	Maths	true	greatest common divisor disjunction	∨ ⟜+₄⇡5	[4 1 2 1 4]
-÷⊃∨×	lcm (experimental)	Idiom	Maths	true	least common multiple	÷⊃∨× ⟜+₄⇡5	[0 5 6 21 8]
+SYNTAX	DESCRIPTION	CLASS	CATEGORY	RANK-POLYMORPHIC	KEYWORDS	EXAMPLE	EXAMPLE OUTPUT	EXPERIMENTAL
+¬	logical not; 1-x	Primitive	Maths	true	boolean	¬ 7	¯6	false
+±	sign of a number	Primitive	Maths	true	signum normalise normalize unit	± -₂⇡5	[¯1 ¯1 0 1 1]	false
+±	normalise a complex number	Primitive	Maths	true	normalize unit	⁅₅ ± ℂ4 3	0.6+0.8i	false
+±	get case of a character	Primitive	String	true	uppercase lowercase letter	± "abAB,."	[¯1 ¯1 1 1 0 0]	false
+¯	negate number	Primitive	Maths	true	negative	¯ 1	¯1	false
+¯	toggle case	Primitive	String	true	capitalise capitalize uppercase lowercase	¯"aAbB,."	"AaBb,."	false
+¯₄	rotate a quarter turn in the complex plane	Primitive	Maths	true	complex multiply i	¯₄ 2r5i	¯5+2i	false
++	add	Primitive	Maths	true	add addition	+ 1 3	4	false
+-@0	convert digit to number	Idiom	String	true	digits number	-@0 @5	5	false
++@0	convert number to digit	String	Idiom	true	digits number	+@0 ⇡10	"0123456789"	false
+⍉⇌	rotate a matrix 90 degrees clockwise	Idiom	Array	false	rotate matrix	♭ ⍉⇌ ↯2_2⇡4	[2 0 3 1]	false
+⍜△¯	rotate a matrix 180 degrees counterclockwise	Idiom	Array	true	rotate matrix	♭ ⍜△¯ ↯2_2⇡4	[3 2 1 0]	false
+⇌⍉	rotate a matrix 90 degrees counterclockwise	Idiom	Array	false	rotate matrix	♭ ⇌⍉  ↯2_2⇡4	[1 3 0 2]	false
+⊜□⊸≠	split on an element	Idiom	Array	false	split string	⊜□⊸≠ @\s "split this on spaces"	["split"│"this"│"on"│"spaces"]	false
+⊏	apply a permutation	Primitive	Maths	false	permutation	⊏ 1_2_0_3 "abcd"	"bcad"	false
+⇡	identity permutation	Primitive	Maths	false	permutation	⇡4	[0 1 2 3]	false
+⊏	compose permutations	Primitive	Maths	false	permutation	⊏ 1_0_2_3 2_3_0_1	[3 2 0 1]	false
+⍏	invert a permutation	Primitive	Maths	false	inverse	⍏ [1 2 0 3]	[2 0 1 3]	false
+-⊸¬	linearly map [0, 1] onto [-1, 1]	Idiom	Maths	true	wrench stretch lerp	⁅₁₀ -⊸¬ ÷⟜⇡ 5	[¯1 ¯0.6 ¯0.2 0.2 0.6]	false
+∿	sine	Primitive	Maths	true	sin trig math	∿ 0	0	false
+∿+η	cosine	Idiom	Maths	true	cos trig math	∿+η 0	1	false
+∂∿	cosine	Idiom	Maths	true	cos trig math	⁅₁₀ ∂∿ η	0	true
+⍜°√/+	euclidean norm	Idiom	Maths	false	distance vector length size	⍜°√/+ 3_4	5	false
+⌵ℂ	euclidean norm (2d)	Idiom	Maths	true	distance vector length size	⌵ℂ 5 12	13	false
+/+⌵	taxicab norm	Idiom	Maths	false	distance vector length size manhattan	/+⌵ ¯3_2	5	false
+/↥⌵	Chebyshev norm	Idiom	Maths	false	distance vector length size maximum	/↥⌵ ¯4_7	7	false
+÷⊃⧻/+	arithmetic mean	Idiom	Maths	false	average AM	÷⊃⧻/+ ⇡5	2	false
+⌝ⁿ⊃⧻/×	geometric mean	Idiom	Maths	false	average GM	⁅₁₀ ⌝ⁿ⊃⧻/× 3_27_6561	81	false
+⍜°√(÷⊃⧻/+)	quadratic mean	Idiom	Maths	false	root mean square average QM RMS	⁅₃ ⍜°√(÷⊃⧻/+) [1 2 3 4]	2.739	false
+÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆	Median	Idiom	Maths	true	average	÷₂/+⊏⊟ ⊃⌊⌈÷₂-₁⊸⧻⍆ ⇡10	4.5	false
+⧻⊚	sum of natural array	Idiom	Array	true	how many	⧻⊚ ◿2↯3_3⇡9	4	false
++@a⇡26	lowercase latin alphabet	Idiom	String	irrelevant	alphabet letter	+@a⇡26	"abcdefghijklmnopqrstuvwxyz"	false
+⌵	uppercase	Primitive	String	true	capitalize capital letter	⌵ "HeLlO WoRlD"	"HELLO WORLD"	false
+¯	toggle case	Primitive	String	true	uppercase capital lowercase letter	¯ "HeLlO WoRlD"	"hElLo wOrLd"	false
+×⊃(≥@0|≤@9)	is a character a digit?	Idiom	String	true	number parse	×⊃(≥@0|≤@9) "a98sf98-34 "	[0 1 1 0 0 1 1 0 1 1 0]	false
+∊⇡10-@0	is character a digit?	Idiom	String	true	number parse	∊⇡10-@0 "abcd012689aklfs"	[0 0 0 0 1 1 1 1 1 1 0 0 0 0 0]	false
+°/×	prime factorisation	Idiom	Maths	true	decompose factor	°/× 18	[2 3 3]	false
+=1⧻°/×	is prime?	Idiom	Maths	false	primality test	=1⧻°/× 19	1	false
+=1/+>1°/×	is prime?	Idiom	Maths	true	primality test	▽ ⊸(=1/+>1°/×) +₁⇡20	[2 3 5 7 11 13 17 19]	false
+⊚=0◿⊸(⇡+1)	divisors of a positive number	Idiom	Maths	false	divide	⊚=0◿⊸(⇡+1) 20	[1 2 4 5 10 20]	false
+⊚=0◿⊸⇡	proper divisors of a positive number	Idiom	Maths	false	divide	⊚=0◿⊸⇡ 20	[1 2 4 5 10]	false
+°▽⍆	row occurrence count	Idiom	Array	irrelevant	count times	⊂°▽⍆ 7_3_4_6_7_4	[1 2 1 2 3 4 6 7]	false
+/◇⊂	flatten boxed array	Idiom	Array	false	join boxes concatenate	/◇⊂ {[1 3] [5 2] [3 6]}	[1 3 5 2 3 6]	false
+⍥/◇⊂∞	flatten nested boxed array	Idiom	Array	true	join boxes concatenate	⍥/◇⊂∞ {{1 4} {[3 4]} [2 5] 4}	[1 4 3 4 2 5 4]	false
+⍜⊏⇌ 	swap entries in array	Idiom	Array	false	_	⍜⊏⇌ 2_4 ⇡5	[0 1 4 3 2]	false
+⍜⊡⇌ 	swap entries in array	Idiom	Array	true	_	♭ ⍜⊡⇌ [0_1 1_2] ↯2_3 ⇡6	[0 5 2 3 4 1]	false
+↧⊸↥	set NaNs to a given value	Idiom	array	true	replace const	↧⊸↥ 5 [1 NaN 4]	[1 5 4]	false
+⤸₁	transpose image	Primitive	Images	irrelevant	image flip diagonal	△  ⤸₁ °△ 2_3_4	[3 2 4]	false
+♭₀	first element of array	Primitive	Array	true	first matrix	♭₀ °△2_3_4	0	false
+°⍆	shuffle rows of array	Primitive	Array	irrelevant	random	⍆ °⍆ ⇡5	[0 1 2 3 4]	false
+⍜∩⋯⬚0×	bitwise and	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0× ⊸+₂⇡5	[0 1 0 1 4]	false
+⍜∩⋯⬚0↥	bitwise or	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0↥ ⊸+₂⇡5	[2 3 6 7 6]	false
+⍜⋯¬	bitwise not	Idiom	Maths	true	bitwise boolean	⍜⋯¬ ⇡8	[7 6 5 4 3 2 1 0]	false
+⍜∩⋯⬚0≠	bitwise xor	Idiom	Maths	true	bitwise boolean	⍜∩⋯⬚0≠ ⊸+₂⇡5	[2 2 6 6 2]	false
+×	boolean and	Primitive	Maths	true	boolean conjunction	× 0 1	0	false
+↥	boolean or	Primitive	Maths	true	boolean disjunction	↥ 0 1	1	false
+≠	boolean xor	Primitive	Maths	true	exclusive or disjunction boolean	≠ 0 1	1	false
+=	boolean xnor	Primitive	Maths	true	boolean material biconditional	= 0 1	0	false
+≥	boolean implication	Primitive	Maths	true	material conditional implies	≥ 0 1	1	false
+∨	gcd; boolean or	Idiom	Maths	true	greatest common divisor disjunction	∨ ⟜+₄⇡5	[4 1 2 1 4]	true
+÷⊃∨×	lcm	Idiom	Maths	true	least common multiple	÷⊃∨× ⟜+₄⇡5	[0 5 6 21 8]	true
