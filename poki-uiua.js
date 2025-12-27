@@ -14,13 +14,14 @@ I = _ => {
     b.className = 0 == s.get("w") ? "w" : 0 == s.get("b") ? "b" : ""
     um.href = "quiz?" + b.className
     fetch("table.tsv").then(d => d.text()).then(d => {
-        ps = d.replace(/[<>&'"]/g, x => ({
+        ent = {
             '<': '&lt;',
             '>': '&gt;',
             '&': '&amp;',
             "'": '&apos;',
             '"': '&quot;',
-        } [x])).split(/\r?\n/g).slice(1, -1).map(r => r.split("\t").filter(w => w != ""))
+        }
+        ps = d.replace(/[<>&'"]/g, x => ent[x]).split(/\r?\n/g).slice(1, -1).map(r => r.split("\t").filter(w => w != ""))
         c = ps.map(r => r[0])
         h = c.map(highlight)
         e = ps.map(r => r[1])
@@ -30,8 +31,7 @@ I = _ => {
         p = d.split(/\r?\n/g).slice(1, -1).map(x => x.toLowerCase().replace(/http\S+\t/, "(>)").replace(/http\S+$/, "(?)"))
         r = ""
         for (var i = 0; i < c.length; i++) {
-	    // console.log(e[i])
-            r += `<tr><td>${h[i]}</td><td><a href="https://www.uiua.org/docs/${encodeURIComponent(c[i])}"/></td><td>${e[i]}</td><td>${rankpoly[i]}</td><td>${experimental[i]}</td></tr>`
+            r += `<tr><td>${h[i]}</td><td><a href="https://www.uiua.org/docs/${encodeURIComponent(c[i].replace(/&.*?;/g,s=>Object.entries(ent).find(kv=>kv[1]==s)[0]))}"/></td><td>${e[i]}</td><td>${rankpoly[i]}</td><td>${experimental[i]}</td></tr>`
         }
         t.innerHTML = r
         F(Q(q.value = s.get("q")))
